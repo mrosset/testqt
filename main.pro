@@ -1,6 +1,6 @@
 TEMPLATE = app
 TARGET = main
-QT += webenginewidgets
+QT += webenginewidgets webengine
 
 SOURCES += \
     main.cpp
