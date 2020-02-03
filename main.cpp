@@ -14,6 +14,8 @@ int main(int argc, char **argv) {
   window.setCentralWidget(&view);
   view.load(QUrl("https://gnu.org"));
 
+  view.page()->runJavaScript("new Date().toString();", [](const QVariant &v) { qDebug() << v.toString(); });
+
   qDebug() << QDateTime().currentDateTime();
   return app.exec();
 }
